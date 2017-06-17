@@ -5,4 +5,4 @@
     kiosk_user: root
     website_url: "http://www.google.com"
   roles:
-    - xtrinch.kiosk
+    - role_under_test
