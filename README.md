@@ -1,12 +1,18 @@
 Ansible role: kiosk
 =========
 
-Creates a chromium website kiosk out of ubuntu server with a very light stack of X and openbox.
+Creates a chromium website kiosk out of ubuntu server with a very light stack of X and openbox. Essentially, it creates two separate systemd services: one for running x server, and one for running chromium. Chromium is restarted upon exiting.
 
 Requirements
 ------------
 
 - a clean installation of ubuntu server
+
+Installation
+------------
+
+Role can be installed via ansible-galaxy or via cloning this repository into roles/.
+For more info, see: https://galaxy.ansible.com/xtrinch/kiosk/
 
 Role Variables
 --------------
