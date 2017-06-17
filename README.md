@@ -1,7 +1,7 @@
 Ansible role: kiosk
 =========
 
-Creates a chromium website kiosk out of ubuntu server with a very light stack of X and openbox. Essentially, it creates two separate systemd services: one for running x server, and one for running chromium. Chromium is restarted upon exiting.
+Creates a chromium website kiosk out of ubuntu server with a very light stack of X and openbox. Essentially, it creates two separate systemd services: one for running x environment (startx), and one for running chromium. Chromium is restarted upon exiting.
 
 Requirements
 ------------
