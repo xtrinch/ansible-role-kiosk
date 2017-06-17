@@ -1,0 +1,10 @@
+---
+
+- name: reload systemd
+  command: systemctl daemon-reload
+
+- name: restart x
+  action: service name=x state=restarted enabled=yes
+
+- name: restart x
+  action: service name=x state=restarted enabled=yes

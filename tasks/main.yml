@@ -1,0 +1,55 @@
+---
+
+- name: Install latest version of "xorg" ignoring "install-recommends"
+  apt:
+    name: xorg
+    state: latest
+    install_recommends: no
+
+- name: Install latest version of "openbox" ignoring "install-recommends"
+  apt:
+    name: openbox
+    state: latest
+    install_recommends: no
+
+- name: Install latest version of "xserver-xorg-legacy" ignoring "install-recommends"
+  apt:
+    name: xserver-xorg-legacy
+    state: latest
+    install_recommends: no
+
+- name: Install latest version of "chromium-browser" ignoring "install-recommends"
+  apt:
+    name: chromium-browser
+    state: latest
+    install_recommends: no
+
+- name: Adding existing user '{{ ansible_user }}' to group tty
+  user: name='{{ ansible_user }}'
+        groups=tty
+        append=yes
+
+- copy:
+    src: Xwrapper.config
+    dest: /etc/X11/Xwrapper.config
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
+
+- name: copy x service file
+  template: src=x.service.j2 dest=/etc/systemd/system/x.service
+  notify:
+    - reload systemd
+    - restart x
+
+- name: copy chromium kiosk service file
+  template: src=kiosk.service.j2 dest=/etc/systemd/system/kiosk.service
+  notify:
+    - reload systemd
+    - restart kiosk
+
+- name: make sure service x is running
+  service: name=x state=started
+
+- name: make sure service kiosk is running
+  service: name=kiosk state=started

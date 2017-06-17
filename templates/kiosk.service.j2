@@ -1,0 +1,12 @@
+[Unit]
+Description=kiosk chromium
+After=x.service
+
+[Service]
+User=test
+ExecStart=/bin/sh -c "/usr/bin/chromium-browser --kiosk {{ website_url }}"
+Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
