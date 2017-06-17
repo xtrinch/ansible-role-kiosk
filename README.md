@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: trina.kiosk, kiosk_user: test, website_url: "http://www.google.com" }
+         - { role: xtrinch.kiosk, kiosk_user: test, website_url: "http://www.google.com" }
 
 License
 -------
