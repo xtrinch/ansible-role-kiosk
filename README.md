@@ -1,3 +1,5 @@
+[![Ansible Role](https://img.shields.io/ansible/role/18529.svg)](https://galaxy.ansible.com/xtrinch/kiosk/)
+
 Ansible role: kiosk
 =========
 
