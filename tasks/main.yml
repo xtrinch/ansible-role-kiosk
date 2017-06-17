@@ -24,8 +24,8 @@
     state: latest
     install_recommends: no
 
-- name: Adding existing user '{{ ansible_user }}' to group tty
-  user: name='{{ ansible_user }}'
+- name: Adding existing user '{{ kiosk_user }}' to group tty
+  user: name='{{ kiosk_user }}'
         groups=tty
         append=yes
 
