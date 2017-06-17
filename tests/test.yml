@@ -1,5 +1,8 @@
 ---
 - hosts: localhost
   remote_user: root
+  vars:
+    kiosk_user: root
+    website_url: "http://www.google.com"
   roles:
     - trina.kiosk
