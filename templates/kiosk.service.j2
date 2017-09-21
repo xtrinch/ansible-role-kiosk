@@ -3,7 +3,7 @@ Description=kiosk chromium
 After=x.service
 
 [Service]
-User=test
+User={{ ansible_user }}
 ExecStart=/bin/sh -c "/usr/bin/chromium-browser --kiosk {{ website_url }}"
 Restart=always
 Environment=DISPLAY=:0
