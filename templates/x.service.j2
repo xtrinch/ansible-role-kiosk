@@ -2,7 +2,7 @@
 Description=startx
 
 [Service]
-User=test
+User={{ kiosk_user }}
 ExecStart=/bin/sh -c "sudo -u {{ kiosk_user }} startx /etc/X11/Xsession"
 
 [Install]
