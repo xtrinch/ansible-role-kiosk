@@ -49,7 +49,7 @@
     - restart kiosk
 
 - name: make sure service x is running
-  service: name=x state=started
+  service: name=x state=started enabled=yes
 
 - name: make sure service kiosk is running
-  service: name=kiosk state=started
+  service: name=kiosk state=started enabled=yes
