@@ -36,6 +36,13 @@
     group: root
     mode: "u=rw,g=r,o=r"
 
+- copy:
+    src: xinitrc
+    dest: /etc/X11/xinit/xinitrc
+    owner: root
+    group: root
+    mode: "u=rw,g=r,o=r"
+
 - name: copy x service file
   template: src=x.service.j2 dest=/etc/systemd/system/x.service
   notify:
