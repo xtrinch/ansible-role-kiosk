@@ -3,7 +3,7 @@ Description=startx
 
 [Service]
 User={{ kiosk_user }}
-ExecStart=/bin/sh -c "sudo -S -u {{ kiosk_user }} startx /etc/X11/Xsession"
+ExecStart=/bin/sh -c "sudo -S -u {{ kiosk_user }} startx /etc/X11/Xsession -- -nocursor"
 
 [Install]
 WantedBy=multi-user.target
