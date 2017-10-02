@@ -42,7 +42,7 @@
     dest: /etc/X11/xinit/xinitrc
     owner: root
     group: root
-    mode: "u=rw,g=r,o=r"
+    mode: "u=rw,g=r,o=rx"
     force: yes
 
 - name: copy x service file
