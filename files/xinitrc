@@ -1,5 +1,6 @@
 /bin/sh
 
+export DISPLAY=:0.0
 setterm -blank 0
 xset s off         # don't activate screensaver
 xset -dpms         # disable DPMS (Energy Star) features.
