@@ -4,7 +4,7 @@ After=x.service
 
 [Service]
 User={{ kiosk_user }}
-ExecStart=/bin/sh -c "/usr/bin/chromium-browser --noerrdialogs --disable-suggestions-service --disable-translate --disable-save-password-bubble --disable-session-crashed-bubble --disable-infobars --touch-events=enabled --disable-gesture-typing --kiosk {{ website_url }}"
+ExecStart=/bin/sh -c "/usr/bin/chromium-browser --noerrdialogs --disable-suggestions-service --disable-translate --disable-save-password-bubble --disable-session-crashed-bubble --disable-infobars --touch-events=enabled --disable-gesture-typing --disable-pinch --overscroll-history-navigation=0 --kiosk {{ website_url }}"
 Restart=always
 Environment=DISPLAY=:0
 
