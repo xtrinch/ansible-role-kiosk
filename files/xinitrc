@@ -1,6 +1,6 @@
 /bin/sh
 
-# /etc/X11/xinit/xinitrc
+# /etc/X11/xinit/xinitrc test
 #
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
