@@ -1,13 +1,13 @@
 /bin/sh
 
+setterm -blank 0
+xset s off         # don't activate screensaver
+xset -dpms         # disable DPMS (Energy Star) features.
+xset s noblank     # don't blank the video device
+
 # /etc/X11/xinit/xinitrc test
 #
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
 # invoke global X session script
 . /etc/X11/Xsession
-
-setterm -blank 0
-xset s off         # don't activate screensaver
-xset -dpms         # disable DPMS (Energy Star) features.
-xset s noblank     # don't blank the video device
