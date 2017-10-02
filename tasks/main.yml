@@ -31,7 +31,7 @@
 
 - copy:
     src: Xwrapper.config
-    dest: /etc/X11/Xwrapper.config
+    dest: /etc/X11/Xwrapper.config1
     owner: root
     group: root
     mode: "u=rw,g=r,o=r"
