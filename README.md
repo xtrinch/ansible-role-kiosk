@@ -9,7 +9,7 @@ Creates a chromium website kiosk out of ubuntu server with a very light stack of
 Requirements
 ------------
 
-- a clean installation of ubuntu server (tested with 16.04 and 17.04)
+- a clean installation of ubuntu server (tested with 16.04, 17.04, 18.04)
 
 Installation
 ------------
